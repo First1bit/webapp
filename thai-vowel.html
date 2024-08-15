@@ -86,8 +86,9 @@
             document.getElementById('vowelDisplay').textContent = randomVowel;
 
             // หน่วงเวลา 2 วินาที (2000 มิลลิวินาที) ก่อนอ่านออกเสียง
-            document.getElementById("generateButton").disabled = false;
+            
             setTimeout(() => {
+                document.getElementById("generateButton").disabled = false;
                 const utterance = new SpeechSynthesisUtterance(randomVowel);
                 utterance.lang = 'th-TH'; // ตั้งค่าภาษาเป็นไทย
                 speechSynthesis.speak(utterance);
